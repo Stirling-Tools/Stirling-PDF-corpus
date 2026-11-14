@@ -1,0 +1,31 @@
+\documentclass[twocolumn,10pt]{article}
+\input{fonts}
+\usepackage{amsmath}
+\title{Measuring Reading Order in Two Column Layouts}
+\author{C. Reader}
+\date{}
+\begin{document}
+\maketitle
+\section{Introduction}
+Two column layouts are common in scientific papers. A converter must read the left column completely
+before moving to the right column, otherwise sentences from different paragraphs are mixed together.
+This paper describes a simple test document for that purpose. Each paragraph contains ordinary words so that
+any mixing between columns is easy to detect when the extracted text is compared with the source.
+\section{Method}
+We place several paragraphs of plain text in each column. The paragraphs contain numbers such as 42 and 1999,
+hyphenated words such as state-of-the-art, and a short equation $E = mc^2$ to check inline mathematics.
+The left column ends with a long paragraph that continues across the column break, which tests whether the
+reader joins the two halves of the paragraph in the correct order.
+\section{Results}
+In our experiments the extracted text matched the source in most cases. Errors were found mainly near
+headings and footnotes, where small fonts and short lines confuse the column detection.
+Long words such as internationalisation and characterisation were sometimes split by hyphenation at
+the end of a line, which a careful reader should join again.
+\section{Discussion}
+The results suggest that column detection is reliable when the gutter between the columns is wide.
+Narrow gutters, figures that span both columns, and footnotes remain difficult. Future versions of the test
+will include tables, figures, and footnotes in both columns.
+\section{Conclusion}
+A small synthetic document is enough to catch most reading order mistakes. We recommend adding such a document
+to any regression suite for text extraction.
+\end{document}

@@ -1,0 +1,40 @@
+\documentclass[10pt]{article}
+\input{fonts}
+\usepackage{booktabs}
+\begin{document}
+\section*{Annual Inventory Report}
+The following tables summarise stock levels and shipments for each warehouse during the year.
+\begin{table}[h]
+\centering
+\begin{tabular}{lrrrr}
+\toprule
+Warehouse & Opening stock & Received & Shipped & Closing stock\\
+\midrule
+Aberdeen & 1\,250 & 3\,400 & 3\,120 & 1\,530\\
+Bristol & 980 & 2\,760 & 2\,905 & 835\\
+Cardiff & 2\,045 & 4\,110 & 3\,870 & 2\,285\\
+Dundee & 640 & 1\,580 & 1\,610 & 610\\
+Exeter & 1\,115 & 2\,290 & 2\,330 & 1\,075\\
+\midrule
+Total & 6\,030 & 14\,140 & 13\,835 & 6\,335\\
+\bottomrule
+\end{tabular}
+\caption{Stock movements by warehouse.}
+\end{table}
+\begin{table}[h]
+\centering
+\begin{tabular}{|l|c|c|c|}
+\hline
+Product & Quarter one & Quarter two & Change (\%)\\
+\hline
+Brackets & 12.50 & 13.75 & +10.0\\
+Hinges & 4.20 & 4.05 & $-3.6$\\
+Fasteners & 0.85 & 0.90 & +5.9\\
+Panels & 48.00 & 51.20 & +6.7\\
+\hline
+\end{tabular}
+\caption{Unit prices in pounds.}
+\end{table}
+Shipments were highest in the third quarter. The Cardiff warehouse handled the largest volume,
+while Dundee remained the smallest site throughout the year.
+\end{document}
