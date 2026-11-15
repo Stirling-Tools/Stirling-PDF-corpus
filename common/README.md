@@ -35,11 +35,12 @@ character counts from `scripts/pdfium_open.mjs`, or the PDFium error code),
 
 | Folder | Files | What it is for |
 | --- | --- | --- |
-| `synthetic/` | 61 | One hand-built PDF per problem, from `scripts/make_synthetic.py`, grouped into `fonts`, `text`, `layout`, `pages`, `content`, `structure` and `annotations`. |
+| `synthetic/` | 97 | One hand-built PDF per problem, from `scripts/make_synthetic.py`, grouped into `fonts`, `text`, `layout`, `pages`, `content`, `structure`, `annotations`, `interactive` (forms, JavaScript, links and named destinations, deep bookmarks, annotations with appearances, a junk signature, attachments), `metadata` (odd Info values, broken and disagreeing XMP), `graphics` (transparency, spot colours, shadings and patterns), `edge` (page-tree and outline cycles, a lying `/Count`, odd `/Rotate` and MediaBox values, actions, attachments, NeedAppearances forms, incremental chains) and `regressions` (a reproduction of an oblique-font redaction bug, plus two controls for bugs that need other files to reproduce). |
 | `fonts-missing-latex/` | 98 | The same seven LaTeX documents built 14 ways: fonts embedded, not embedded, embedded but with the font program stripped, or as Type 3 bitmaps. Each `*-embed-*` folder is the control for its `*-noembed-*` or `*-stripped` partner. |
 | `latex-documents/` | 3 | Two-column reading order, hyphenation and maths, from the Office Convert benchmark. |
 | `multilingual-udhr/` | 49 | One PDF per script or language (Arabic, Hebrew, the Indic scripts, CJK, Thai, Ethiopic, Tibetan, Mongolian, emoji and others), mostly Universal Declaration of Human Rights text. |
 | `stirling-fixtures/` | 11 | Small generated fixtures copied from Stirling-PDF's editor tests: forms, annotations, links, tables, tagging, split content streams. |
+| `damaged-recovery/` | 8 | Byte-mutated copies of synthetic samples that one engine opens and the other refuses: five PDFBox repairs but PDFium rejects, three the other way round. From `scripts/make_damaged.py`. |
 | `optimizer/` | 18 | Filters, colour spaces, images, JPEG 2000 and structure that broke optimisation or greyscale conversion. Its own `optimizer/README.md` describes each file, and `scripts/make_optimizer_cases.py` rebuilds them. |
 
 ### Missing fonts
@@ -68,8 +69,24 @@ a duplicated object number, an incremental update, cross-reference and object
 streams, and three kinds of encryption. The 128-bit AES file opens with the
 password `corpus`.
 
-PDFium cannot open `no-xref-no-trailer.pdf`, while qpdf repairs it. That is the
-one real difference between the two engines here.
+PDFium cannot open `no-xref-no-trailer.pdf`, while qpdf repairs it. `damaged-recovery/`
+holds more files that only one of PDFium and PDFBox can open.
+
+### Forms, links, metadata and hidden content
+
+`synthetic/interactive/` holds the things page tools tend to lose: a form with
+hierarchical names, a radio group, read-only, comb and calculated fields; JavaScript in
+eight places; links by explicit, named and remote destinations; four-level bookmarks with
+UTF-16 titles; eleven annotation types with appearance streams; a signature whose
+contents are junk; and attachments with a UTF-16 name, a wrong size and a missing stream.
+
+`synthetic/text/text-only-in-annotations.pdf` keeps all its words in annotations, and
+`synthetic/content/optional-content-states.pdf` keeps the word SECRET in a layer that is
+off by default. Both check that redaction, text export and blank-page detection look
+beyond the page's own content stream. `synthetic/text/tagged-reading-order.pdf` draws
+its right-hand column first, so only the structure tree gives the true reading order.
+`synthetic/content/vector-drawing-no-text.pdf` is a bar chart and a signature stroke
+with no text and no images, which blank-page detection has to render to see.
 
 ## Scripts
 
@@ -80,6 +97,9 @@ one real difference between the two engines here.
 - `scripts/latex-unembedded/build.sh` rebuilds `fonts-missing-latex/` from
   `src/*.tex`. It runs TeX Live in Docker with no network access. The stripped
   variants need an image with `pikepdf`; the script uses the Stirling-PDF image.
+- `scripts/make_damaged.py SYNTHETIC_DIR OUT_DIR` writes byte mutations of the synthetic
+  samples for crash and recovery testing. Each sample's mutants are seeded by its path, so
+  adding samples doesn't change the existing ones.
 - `scripts/build_manifest.py` writes a manifest from a notes file and the folders
   given. It uses `pdfinfo`, `pdffonts` and `qpdf` when they are installed.
 - `scripts/pdfium_open.mjs DIR` opens every PDF under `DIR` with PDFium (the

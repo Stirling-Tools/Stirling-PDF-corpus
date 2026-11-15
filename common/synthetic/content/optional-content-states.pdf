@@ -1,0 +1,64 @@
+%PDF-1.7
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R /OCProperties << /OCGs [5 0 R 6 0 R 7 0 R] /D << /Order [5 0 R 6 0 R 7 0 R] /OFF [6 0 R 7 0 R] /Locked [5 0 R] /AS [<< /Event /Print /OCGs [7 0 R] /Category [/Print] >>] >> >> >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> /Properties << /L1 5 0 R /L2 6 0 R /L3 7 0 R /MD 8 0 R >> /XObject << /HF 9 0 R >> >> /Contents 11 0 R /Annots [10 0 R] >>
+endobj
+5 0 obj
+<< /Type /OCG /Name (Visible layer) >>
+endobj
+6 0 obj
+<< /Type /OCG /Name (Hidden layer) >>
+endobj
+7 0 obj
+<< /Type /OCG /Name (Print only) /Usage << /Print << /PrintState /ON >> /View << /ViewState /OFF >> >> >>
+endobj
+8 0 obj
+<< /Type /OCMD /VE [/And 5 0 R [/Not 6 0 R]] >>
+endobj
+9 0 obj
+<< /Length 24 /Type /XObject /Subtype /Form /BBox [0 0 200 40] /OC 6 0 R >>
+stream
+1 0 0 rg 0 0 200 40 re f
+endstream
+endobj
+10 0 obj
+<< /Type /Annot /Subtype /Square /Rect [300 500 400 560] /C [1 0 0] /OC 6 0 R /Contents (SECRET note) /P 4 0 R /F 4 >>
+endobj
+11 0 obj
+<< /Length 315  >>
+stream
+/OC /L1 BDC BT /F1 16 Tf 72 700 Td (Always visible) Tj ET EMC
+/OC /L2 BDC BT /F1 16 Tf 72 670 Td (SECRET text in a hidden layer) Tj ET EMC
+/OC /L3 BDC BT /F1 16 Tf 72 640 Td (Print only watermark) Tj ET EMC
+/OC /MD BDC BT /F1 16 Tf 72 610 Td (Shown by a visibility expression) Tj ET EMC
+q 1 0 0 1 72 520 cm /HF Do Q
+endstream
+endobj
+xref
+0 12
+0000000000 65535 f 
+0000000015 00000 n 
+0000000240 00000 n 
+0000000297 00000 n 
+0000000394 00000 n 
+0000000621 00000 n 
+0000000675 00000 n 
+0000000728 00000 n 
+0000000849 00000 n 
+0000000912 00000 n 
+0000001045 00000 n 
+0000001180 00000 n 
+trailer
+<< /Size 12 /Root 1 0 R  >>
+startxref
+1548
+%%EOF

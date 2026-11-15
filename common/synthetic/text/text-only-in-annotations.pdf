@@ -1,0 +1,66 @@
+%PDF-1.7
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R /AcroForm << /Fields [10 0 R] /DR << /Font << /Helv 3 0 R >> >> >> >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >>  >> /Contents 11 0 R /Annots [8 0 R 9 0 R 10 0 R] >>
+endobj
+5 0 obj
+<< /Length 52 /Type /XObject /Subtype /Form /BBox [0 0 260 30] /Resources << /Font << /Helv 3 0 R >> >> >>
+stream
+BT /Helv 16 Tf 4 8 Td (Invoice total 1,234.00) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Length 78 /Type /XObject /Subtype /Form /BBox [0 0 160 60] /Resources << /Font << /Helv 3 0 R >> >> >>
+stream
+0.8 0 0 RG 3 w 2 2 156 56 re S BT /Helv 32 Tf 0.8 0 0 rg 30 18 Td (PAID) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Length 58 /Type /XObject /Subtype /Form /BBox [0 0 240 22] /Resources << /Font << /Helv 3 0 R >> >> >>
+stream
+/Tx BMC BT /Helv 12 Tf 2 6 Td (ACME Widgets Ltd) Tj ET EMC
+endstream
+endobj
+8 0 obj
+<< /Type /Annot /Subtype /FreeText /Rect [72 650 332 680] /DA (/Helv 16 Tf 0 g) /Contents (Invoice total 1,234.00) /AP << /N 5 0 R >> /P 4 0 R /F 4 >>
+endobj
+9 0 obj
+<< /Type /Annot /Subtype /Stamp /Rect [380 640 540 700] /Name /Paid /AP << /N 6 0 R >> /P 4 0 R /F 4 >>
+endobj
+10 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (customer) /V (ACME Widgets Ltd) /Rect [72 600 312 622] /DA (/Helv 12 Tf 0 g) /AP << /N 7 0 R >> /P 4 0 R /F 4 >>
+endobj
+11 0 obj
+<< /Length 30  >>
+stream
+0.9 G 0.5 w 36 36 540 720 re S
+endstream
+endobj
+xref
+0 12
+0000000000 65535 f 
+0000000015 00000 n 
+0000000131 00000 n 
+0000000188 00000 n 
+0000000285 00000 n 
+0000000442 00000 n 
+0000000634 00000 n 
+0000000852 00000 n 
+0000001050 00000 n 
+0000001216 00000 n 
+0000001335 00000 n 
+0000001509 00000 n 
+trailer
+<< /Size 12 /Root 1 0 R  >>
+startxref
+1591
+%%EOF

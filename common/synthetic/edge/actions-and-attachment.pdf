@@ -1,0 +1,53 @@
+%PDF-1.7
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R /OpenAction 5 0 R /Names << /JavaScript << /Names [(init) 5 0 R] >> /EmbeddedFiles << /Names [(notes.txt) 7 0 R] >> >> >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 /MediaBox [0 0 612 792] >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /Resources << /Font << /F1 4 0 R >> >> /Contents 9 0 R /Annots [8 0 R] >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /S /JavaScript /JS (app.alert\('corpus sample'\);) >>
+endobj
+6 0 obj
+<< /Length 41 /Type /EmbeddedFile /Subtype /text#2Fplain >>
+stream
+Attached plain text file for the corpus.
+
+endstream
+endobj
+7 0 obj
+<< /Type /Filespec /F (notes.txt) /UF (notes.txt) /EF << /F 6 0 R >> >>
+endobj
+8 0 obj
+<< /Type /Annot /Subtype /Link /Rect [72 600 300 620] /Border [0 0 1] /A << /S /Launch /F (calc.exe) >> /P 3 0 R >>
+endobj
+9 0 obj
+<< /Length 117  >>
+stream
+BT /F1 16 Tf 72 700 Td (JavaScript, a Launch link and an attachment) Tj ET BT /F1 12 Tf 72 605 Td (Launch link) Tj ET
+endstream
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000015 00000 n 
+0000000183 00000 n 
+0000000264 00000 n 
+0000000382 00000 n 
+0000000479 00000 n 
+0000000551 00000 n 
+0000000685 00000 n 
+0000000772 00000 n 
+0000000903 00000 n 
+trailer
+<< /Size 10 /Root 1 0 R  >>
+startxref
+1072
+%%EOF

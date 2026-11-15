@@ -1,0 +1,85 @@
+%PDF-1.7
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R /Names << /EmbeddedFiles << /Names [(missing.bin) 10 0 R (report.txt) 8 0 R <FEFF00DC00620065007200730069006300680074002D004D00FC006C006C00650072002E006300730076> 9 0 R] >> >> /AF [9 0 R] >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [4 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >>  >> /Contents 14 0 R /Annots [13 0 R] >>
+endobj
+5 0 obj
+<< /Length 23 /Type /EmbeddedFile /Subtype /text#2Fplain /Params << /Size 9999 /ModDate (D:2026) >> >>
+stream
+Plain text attachment.
+
+endstream
+endobj
+6 0 obj
+<< /Length 19 /Type /EmbeddedFile /Subtype /text#2Fcsv >>
+stream
+name,value
+alpha,1
+
+endstream
+endobj
+7 0 obj
+<< /Length 32 /Type /EmbeddedFile >>
+stream
+Attached through an annotation.
+
+endstream
+endobj
+8 0 obj
+<< /Type /Filespec /F (report.txt) /UF (report.txt) /EF << /F 5 0 R >> /Desc (Declared size is wrong) >>
+endobj
+9 0 obj
+<< /Type /Filespec /F (Ubersicht-Muller.csv) /UF <FEFF00DC00620065007200730069006300680074002D004D00FC006C006C00650072002E006300730076> /EF << /F 6 0 R >> /AFRelationship /Data >>
+endobj
+10 0 obj
+<< /Type /Filespec /F (missing.bin) /UF (missing.bin) >>
+endobj
+11 0 obj
+<< /Type /Filespec /F (annotation.txt) /UF (annotation.txt) /EF << /F 7 0 R >> >>
+endobj
+12 0 obj
+<< /Length 20 /Type /XObject /Subtype /Form /BBox [0 0 16 20]  >>
+stream
+0.3 g 0 0 16 20 re f
+endstream
+endobj
+13 0 obj
+<< /Type /Annot /Subtype /FileAttachment /Rect [72 600 88 620] /FS 11 0 R /Name /Paperclip /Contents (annotation.txt) /AP << /N 12 0 R >> /P 4 0 R /F 4 >>
+endobj
+14 0 obj
+<< /Length 82  >>
+stream
+BT /F1 14 Tf 72 700 Td (Three attachments, one broken, plus one on the page) Tj ET
+endstream
+endobj
+xref
+0 15
+0000000000 65535 f 
+0000000015 00000 n 
+0000000252 00000 n 
+0000000309 00000 n 
+0000000406 00000 n 
+0000000551 00000 n 
+0000000710 00000 n 
+0000000820 00000 n 
+0000000922 00000 n 
+0000001042 00000 n 
+0000001237 00000 n 
+0000001310 00000 n 
+0000001408 00000 n 
+0000001528 00000 n 
+0000001699 00000 n 
+trailer
+<< /Size 15 /Root 1 0 R  >>
+startxref
+1833
+%%EOF

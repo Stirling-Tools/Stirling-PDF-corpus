@@ -1,0 +1,35 @@
+%PDF-1.7
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R  >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Length 330  >>
+stream
+0 G 1.5 w 90 300 m 90 700 l S 90 300 m 420 300 l S
+0.2 0.4 0.8 rg 100 300 40 80 re f 0.2 0.4 0.8 rg 160 300 40 150 re f 0.2 0.4 0.8 rg 220 300 40 220 re f 0.2 0.4 0.8 rg 280 300 40 290 re f 0.2 0.4 0.8 rg 340 300 40 360 re f
+0 G 2 w 1 J 1 j 100 160 m 130 220 150 120 175 180 c 200 240 215 140 240 170 c 265 200 290 150 330 165 c S
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >>  >> /Contents 4 0 R  >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000015 00000 n 
+0000000065 00000 n 
+0000000122 00000 n 
+0000000219 00000 n 
+0000000601 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R  >>
+startxref
+729
+%%EOF
