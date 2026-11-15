@@ -10,10 +10,11 @@ end-to-end test and specific enough that a failure points at one cause.
   redistribute it. Check the fonts embedded in it as well: `pdffonts file.pdf`. Don't
   add files that embed Microsoft, Apple or other commercial fonts. The fonts in this
   folder are OFL, GUST, URW (GPL with font exception), Liberation, DejaVu, Noto,
-  Carlito, AMS or TeX bitmaps. Downloaded documents, customer files and bug-report
+  Carlito, AMS, TeX bitmaps, LibreOffice's OpenSymbol (MPL 2.0) or Tesseract's
+  GlyphLessFont (Apache 2.0). Downloaded documents, customer files and bug-report
   attachments stay out. Instead, build a minimal reproduction, and add the
   generator script if you can.
-- **Small.** Half the files here are under 7 KB, and none is over 310 KB. Leave out
+- **Small.** Nearly half the files here are under 7 KB, and none is over 310 KB. Leave out
   images and embedded media unless they are the point of the file. Keep each file well
   under the 20 MB limit.
 - **No personal data.** Check `pdfinfo` and the XMP metadata for names, email
@@ -42,6 +43,12 @@ character counts from `scripts/pdfium_open.mjs`, or the PDFium error code),
 | `stirling-fixtures/` | 11 | Small generated fixtures copied from Stirling-PDF's editor tests: forms, annotations, links, tables, tagging, split content streams. |
 | `damaged-recovery/` | 8 | Byte-mutated copies of synthetic samples that one engine opens and the other refuses: five PDFBox repairs but PDFium rejects, three the other way round. From `scripts/make_damaged.py`. |
 | `optimizer/` | 18 | Filters, colour spaces, images, JPEG 2000 and structure that broke optimisation or greyscale conversion. Its own `optimizer/README.md` describes each file, and `scripts/make_optimizer_cases.py` rebuilds them. |
+| `conformance/pdfa/` | 20 | Passing PDF/A-1b (tagged and untagged), 2b, 2u, 3b and 4 controls, a valid 3b with an XML invoice attached, and thirteen files that each break one rule. The rule is named in the notes. |
+| `conformance/pdfua/` | 13 | A passing PDF/UA-1 control, LibreOffice's own PDF/UA export (which fails on its link), and eleven files that each break one thing; one of them, an orphaned heading, passes veraPDF 1.30. |
+| `scans/` | 18 | Scanned pages made from our own documents: skew, noise, punch holes, upside down, sideways under `/Rotate`, fax resolution, CCITT G4, JBIG2, strips, mixed raster content, inverted CMYK JPEG, 16-bit, a book spread, a phone photo, a blank back page, and OCR layers that are offset, doubled or from another page. |
+| `tables/` | 13 | Tables without rules, with merged cells, nested, shaded, rules only, rotated headers, right to left, financial, multi-line, drawn in text, across pages, and a spreadsheet printed across and down. |
+| `languages/` | 8 | Bidirectional text, Arabic with vowels and tatweel, Urdu Nastaliq, Hebrew with niqqud, Thai and Lao, Unicode normalisation and look-alikes, invisible characters and emoji sequences, vertical Japanese with ruby, and four right-to-left pages. |
+| `tools/` | 17 | Inputs for particular tools: real signatures with and without a later edit, QR separator sheets, unapplied redactions, duplicate pages, XFA, a portfolio, two hybrid-reference layouts, broken linearisation, a right-to-left booklet and a pair for compare. |
 
 ### Missing fonts
 
@@ -88,6 +95,23 @@ its right-hand column first, so only the structure tree gives the true reading o
 `synthetic/content/vector-drawing-no-text.pdf` is a bar chart and a signature stroke
 with no text and no images, which blank-page detection has to render to see.
 
+### Which files to run through which tool
+
+| Tool | Start with |
+| --- | --- |
+| PDF/A conversion and validation | `conformance/pdfa/*`: each control must stay valid, each fault must be fixed or refused, and `pdfa-3b-xml-invoice-attachment` must keep its invoice |
+| PDF/UA conversion and accessibility checks | `conformance/pdfua/*`, `synthetic/text/tagged-reading-order.pdf` |
+| OCR | `scans/*`; the three `scan-ocr-layer-*` and `scan-double-ocr-layer` files test what skip-text and force-OCR do with an existing text layer |
+| Remove blank pages | `scans/scan-blank-page-with-bleed-through.pdf` (blank, but with noise and bleed-through, so it tests the thresholds), `synthetic/content/vector-drawing-no-text.pdf` and `synthetic/text/text-only-in-annotations.pdf` (should stay) |
+| Compress and greyscale | `scans/*` (CCITT, JBIG2, 16-bit, inverted CMYK), `optimizer/*` |
+| PDF to CSV, Excel and Word tables | `tables/*` |
+| Text extraction, search, redaction | `languages/*`, `synthetic/text/*`, `scans/scan-ocr-layer-*`, `tools/redact-annotations-not-applied.pdf` |
+| Auto-split, split, merge, booklet, n-up | `tools/qr-separator-pages-auto-split.pdf`, `tools/arabic-booklet-direction-r2l.pdf`, `tools/duplicate-pages-three-copies.pdf`, `tables/table-across-pages-repeated-header.pdf` |
+| Signing, sanitise, flatten | `tools/signature-*`, `tools/xfa-*`, `synthetic/interactive/*` |
+| Attachments and portfolios | `tools/portfolio-collection.pdf`, `conformance/pdfa/pdfa-3b-xml-invoice-attachment.pdf`, `synthetic/interactive/attachments-unicode-and-broken.pdf` |
+| Compare | `tools/compare-original.pdf` against `tools/compare-revised.pdf` |
+| Repair and loading | `tools/hybrid-reference-*`, `tools/linearized-*`, `tools/page-object-listed-twice.pdf`, `damaged-recovery/*`, `synthetic/structure/*` |
+
 ## Scripts
 
 - `scripts/make_synthetic.py OUT_DIR` rebuilds `synthetic/`, and `--list` prints
@@ -100,6 +124,22 @@ with no text and no images, which blank-page detection has to render to see.
 - `scripts/make_damaged.py SYNTHETIC_DIR OUT_DIR` writes byte mutations of the synthetic
   samples for crash and recovery testing. Each sample's mutants are seeded by its path, so
   adding samples doesn't change the existing ones.
+- `scripts/rendered/make_sources.py SRC_DIR` writes the HTML and spreadsheet sources, and
+  `scripts/rendered/build.sh SRC_DIR OUT_DIR IMAGE` renders them offline in Docker with
+  LibreOffice and Chromium. The image must have both, plus the Liberation, DejaVu and Noto
+  fonts. This builds `tables/`, `languages/`, the compare pair and the LibreOffice exports
+  the next three scripts start from. Of its output, `table-*.pdf` goes in `tables/`,
+  `compare-*.pdf` in `tools/`, the `lo-*.pdf` exports stay as inputs, and the rest go in
+  `languages/`.
+- `scripts/conformance/make_conformance.py RENDERED_DIR OUT_DIR` builds `conformance/` by
+  editing the LibreOffice exports through qpdf's JSON (`pdfjson.py`).
+- `scripts/scans/make_scans.py REPORT_PDF UDHR_DIR OUT_DIR` builds `scans/` with poppler,
+  ImageMagick, jbig2enc and OCRmyPDF.
+- `scripts/tools/make_tool_cases.py RENDERED_DIR OUT_DIR` and `scripts/tools/ToolCases.java`
+  (PDFBox 3.0, BouncyCastle 1.85 and ZXing 3.5 on the classpath) build `tools/`. The
+  signing key is generated and thrown away on each run.
+- Unlike `make_synthetic.py`, these depend on LibreOffice, Chromium, ImageMagick and
+  Tesseract, so a rebuild gives the same cases but not the same bytes.
 - `scripts/build_manifest.py` writes a manifest from a notes file and the folders
   given. It uses `pdfinfo`, `pdffonts` and `qpdf` when they are installed.
 - `scripts/pdfium_open.mjs DIR` opens every PDF under `DIR` with PDFium (the
