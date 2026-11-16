@@ -1,0 +1,45 @@
+%PDF-1.7
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R /AcroForm << /Fields [5 0 R 6 0 R 7 0 R] /NeedAppearances true /DR << /Font << /Helv 4 0 R >> >> /DA (/Helv 0 Tf 0 g) >> >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 /MediaBox [0 0 612 792] >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /Resources << /Font << /F1 4 0 R >> >> /Contents 8 0 R /Annots [5 0 R 6 0 R 7 0 R] >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+5 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Tx /T (city) /V <FEFF004D00FC006E006300680065006E> /Rect [72 650 300 672] /DA (/Helv 12 Tf 0 g) /P 3 0 R /F 4 >>
+endobj
+6 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Btn /T (agree) /V /Yes /AS /Yes /Rect [72 610 90 628] /P 3 0 R /F 4 /MK << /CA (4) >> /DA (/ZaDb 0 Tf 0 g) >>
+endobj
+7 0 obj
+<< /Type /Annot /Subtype /Widget /FT /Ch /Ff 131072 /T (size) /Opt [(Small) (Medium) (Large)] /V (Medium) /Rect [72 570 200 590] /DA (/Helv 12 Tf 0 g) /P 3 0 R /F 4 >>
+endobj
+8 0 obj
+<< /Length 69  >>
+stream
+BT /F1 14 Tf 72 700 Td (Form fields with no appearance streams) Tj ET
+endstream
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000185 00000 n 
+0000000266 00000 n 
+0000000396 00000 n 
+0000000493 00000 n 
+0000000659 00000 n 
+0000000822 00000 n 
+0000001005 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R  >>
+startxref
+1125
+%%EOF

@@ -1,0 +1,66 @@
+%PDF-1.7
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R] /Count 4 /MediaBox [0 0 612 792] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Length 116  >>
+stream
+BT /F1 24 Tf 72 700 Td (Rotate 0: this edge is the top) Tj ET 4 w 72 600 m 300 600 l 280 610 m 300 600 l 280 590 l S
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /Rotate 0 /Resources << /Font << /F1 3 0 R >> >> /Contents 4 0 R >>
+endobj
+6 0 obj
+<< /Length 117  >>
+stream
+BT /F1 24 Tf 72 700 Td (Rotate 90: this edge is the top) Tj ET 4 w 72 600 m 300 600 l 280 610 m 300 600 l 280 590 l S
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /Rotate 90 /Resources << /Font << /F1 3 0 R >> >> /Contents 6 0 R >>
+endobj
+8 0 obj
+<< /Length 118  >>
+stream
+BT /F1 24 Tf 72 700 Td (Rotate 180: this edge is the top) Tj ET 4 w 72 600 m 300 600 l 280 610 m 300 600 l 280 590 l S
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /Rotate 180 /Resources << /Font << /F1 3 0 R >> >> /Contents 8 0 R >>
+endobj
+10 0 obj
+<< /Length 118  >>
+stream
+BT /F1 24 Tf 72 700 Td (Rotate 270: this edge is the top) Tj ET 4 w 72 600 m 300 600 l 280 610 m 300 600 l 280 590 l S
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /Rotate 270 /Resources << /Font << /F1 3 0 R >> >> /Contents 10 0 R >>
+endobj
+xref
+0 12
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000164 00000 n 
+0000000261 00000 n 
+0000000429 00000 n 
+0000000541 00000 n 
+0000000710 00000 n 
+0000000823 00000 n 
+0000000993 00000 n 
+0000001107 00000 n 
+0000001278 00000 n 
+trailer
+<< /Size 12 /Root 1 0 R  >>
+startxref
+1394
+%%EOF

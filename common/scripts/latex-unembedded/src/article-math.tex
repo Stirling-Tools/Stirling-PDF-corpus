@@ -1,0 +1,42 @@
+\documentclass[11pt]{article}
+\input{fonts}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\title{On the Convergence of Simple Iterative Methods}
+\author{Ada Example \and Brook Sample}
+\date{March 2004}
+\begin{document}
+\maketitle
+\begin{abstract}
+We study the convergence of fixed point iterations for contractive maps on complete metric spaces.
+The main result gives an explicit bound on the number of steps needed to reach a given accuracy,
+and we show that the bound is sharp for a natural family of affine maps.
+\end{abstract}
+\section{Introduction}
+Let $(X,d)$ be a complete metric space and let $T\colon X\to X$ satisfy
+$d(Tx,Ty)\le q\,d(x,y)$ for all $x,y\in X$, where $0\le q<1$. The classical theorem of Banach states
+that the sequence $x_{n+1}=Tx_n$ converges to the unique fixed point $x^\ast$ of $T$ for every starting value $x_0$.
+In this note we revisit the classical argument and make every constant explicit.
+\begin{theorem}
+For every $\varepsilon>0$ the iteration satisfies $d(x_n,x^\ast)<\varepsilon$ whenever
+\begin{equation}
+n \ge \frac{\log\varepsilon - \log d(x_0,x_1) + \log(1-q)}{\log q}.
+\end{equation}
+\end{theorem}
+\begin{proof}
+By the triangle inequality and the contraction property,
+\[
+d(x_n,x^\ast)\le\sum_{k=n}^{\infty} d(x_k,x_{k+1})\le \sum_{k=n}^{\infty} q^k d(x_0,x_1)=\frac{q^n}{1-q}\,d(x_0,x_1).
+\]
+Taking logarithms gives the claim.
+\end{proof}
+\section{Examples}
+For the affine map $T(x)=\alpha x+\beta$ on $\mathbb{R}$ with $|\alpha|<1$ the fixed point is
+$x^\ast=\beta/(1-\alpha)$, and the error after $n$ steps equals $|\alpha|^n|x_0-x^\ast|$.
+The integral $\int_0^1 e^{-x^2}\,dx\approx 0.7468$ and the sum $\sum_{k\ge1} k^{-2}=\pi^2/6$ appear in the
+second example, together with the Greek letters $\alpha,\beta,\gamma,\delta,\lambda,\mu,\sigma,\omega$ and $\Gamma,\Delta,\Omega$.
+We also use the sets $\mathbb{N}\subset\mathbb{Z}\subset\mathbb{Q}\subset\mathbb{R}$ and the relation $a\approx b$.
+\section{Conclusion}
+The estimate is simple, but it is often all that is needed in practice. Further work will consider
+maps that are only contractive on average.
+\end{document}

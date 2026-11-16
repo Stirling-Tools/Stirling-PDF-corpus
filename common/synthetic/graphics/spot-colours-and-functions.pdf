@@ -1,0 +1,52 @@
+%PDF-1.7
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R  >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [7 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+4 0 obj
+<< /Length 55 /FunctionType 4 /Domain [0 1] /Range [0 1 0 1 0 1 0 1] >>
+stream
+{ 0 exch dup 0.91 mul exch dup 0.76 mul exch 0.02 mul }
+endstream
+endobj
+5 0 obj
+<< /Length 13 /FunctionType 4 /Domain [0 1 0 1] /Range [0 1 0 1 0 1 0 1] >>
+stream
+{ pop 0 0 0 }
+endstream
+endobj
+6 0 obj
+<< /Length 293  >>
+stream
+/CS1 cs 1 scn 72 600 100 100 re f /CS1 cs 0.4 scn 182 600 100 100 re f
+/CS2 cs 1 0.5 scn 292 600 100 100 re f
+/CS3 cs 50 60 -40 scn 402 600 100 100 re f
+/CS4 cs 0.2 0.6 0.9 scn 72 480 100 100 re f
+/CS5 cs 2 scn 182 480 100 100 re f
+BT /F1 24 Tf /CS1 cs 1 scn 72 420 Td (Spot colour text) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R >> /ColorSpace << /CS1 [/Separation /PANTONE#20185#20C /DeviceCMYK 4 0 R] /CS2 [/DeviceN [/Cyan /Spot#20Varnish] /DeviceCMYK 5 0 R] /CS3 [/Lab << /WhitePoint [0.9505 1 1.089] /Range [-128 127 -128 127] >>] /CS4 [/CalRGB << /WhitePoint [0.9505 1 1.089] /Gamma [2.2 2.2 2.2] >>] /CS5 [/Indexed /DeviceRGB 2 <FF0000 00FF00 0000FF>] >> >> /Contents 6 0 R  >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000015 00000 n 
+0000000065 00000 n 
+0000000122 00000 n 
+0000000219 00000 n 
+0000000379 00000 n 
+0000000501 00000 n 
+0000000846 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R  >>
+startxref
+1302
+%%EOF

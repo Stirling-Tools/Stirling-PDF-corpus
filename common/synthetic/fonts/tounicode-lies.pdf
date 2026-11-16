@@ -1,0 +1,73 @@
+%PDF-1.7
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 5 0 R >>  >> /Contents 6 0 R  >>
+endobj
+4 0 obj
+<< /Length 642  >>
+stream
+/CIDInit /ProcSet findresource begin 12 dict begin begincmap
+/CIDSystemInfo << /Registry (Adobe) /Ordering (UCS) /Supplement 0 >> def
+/CMapName /Adobe-Simple-UCS def /CMapType 2 def
+1 begincodespacerange <00> <FF> endcodespacerange
+27 beginbfchar
+<61> <007A>
+<62> <0079>
+<63> <0078>
+<64> <0077>
+<65> <0076>
+<66> <0075>
+<67> <0074>
+<68> <0073>
+<69> <0072>
+<6A> <0071>
+<6B> <0070>
+<6C> <006F>
+<6D> <006E>
+<6E> <006D>
+<6F> <006C>
+<70> <006B>
+<71> <006A>
+<72> <0069>
+<73> <0068>
+<74> <0067>
+<75> <0066>
+<76> <0065>
+<77> <0064>
+<78> <0063>
+<79> <0062>
+<7A> <0061>
+<20> <0020>
+endbfchar
+endcmap CMapName currentdict /CMap defineresource pop end end
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding /ToUnicode 4 0 R >>
+endobj
+6 0 obj
+<< /Length 64  >>
+stream
+BT /F1 16 Tf 72 700 Td (what you see is not what you copy) Tj ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000249 00000 n 
+0000000943 00000 n 
+0000001057 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R  >>
+startxref
+1172
+%%EOF

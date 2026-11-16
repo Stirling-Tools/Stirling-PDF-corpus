@@ -1,0 +1,6 @@
+\ifdefined\FONTS\else\def\FONTS{ot1}\fi
+\def\fontsT{t1}\def\fontsL{lm}\def\fontsP{ptm}
+\ifx\FONTS\fontsT \usepackage[T1]{fontenc}\fi
+\ifx\FONTS\fontsL \usepackage[T1]{fontenc}\usepackage{lmodern}\fi
+\ifx\FONTS\fontsP \usepackage[T1]{fontenc}\usepackage{mathptmx}\usepackage[scaled=0.9]{helvet}\usepackage{courier}\fi
+\usepackage[utf8]{inputenc}

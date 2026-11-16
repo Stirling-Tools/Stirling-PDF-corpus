@@ -1,0 +1,67 @@
+%PDF-1.7
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 7 0 R >>  >> /Contents 8 0 R  >>
+endobj
+4 0 obj
+<< /Type /FontDescriptor /FontName /ArialUnicodeMS /Flags 32 /FontBBox [-1000 -300 2000 1100] /ItalicAngle 0 /Ascent 880 /Descent -120 /CapHeight 700 /StemV 80 >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /CIDFontType2 /BaseFont /ArialUnicodeMS /CIDSystemInfo << /Registry (Adobe) /Ordering (Identity) /Supplement 0 >> /FontDescriptor 4 0 R /DW 556 >>
+endobj
+6 0 obj
+<< /Length 506  >>
+stream
+/CIDInit /ProcSet findresource begin 12 dict begin begincmap
+/CIDSystemInfo << /Registry (Adobe) /Ordering (UCS) /Supplement 0 >> def
+/CMapName /Adobe-Identity-UCS def /CMapType 2 def
+1 begincodespacerange <0000> <FFFF> endcodespacerange
+13 beginbfchar
+<0020> <0020>
+<002E> <002E>
+<0052> <0052>
+<0065> <0065>
+<0067> <0067>
+<0069> <0069>
+<006E> <006E>
+<006F> <006F>
+<0072> <0072>
+<0075> <0075>
+<0076> <0076>
+<0077> <0077>
+<0079> <0079>
+endbfchar
+endcmap CMapName currentdict /CMap defineresource pop end end
+endstream
+endobj
+7 0 obj
+<< /Type /Font /Subtype /Type0 /BaseFont /ArialUnicodeMS /Encoding /Identity-H /DescendantFonts [5 0 R] /ToUnicode 6 0 R >>
+endobj
+8 0 obj
+<< /Length 147  >>
+stream
+BT /F1 16 Tf 72 700 Td <0052006500760065006E007500650020006700720065007700200069006E00200065007600650072007900200072006500670069006F006E002E> Tj ET
+endstream
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000249 00000 n 
+0000000427 00000 n 
+0000000613 00000 n 
+0000001171 00000 n 
+0000001310 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R  >>
+startxref
+1509
+%%EOF
