@@ -40,6 +40,7 @@ character counts from `scripts/pdfium_open.mjs`, or the PDFium error code),
 | `fonts-missing-latex/` | 98 | The same seven LaTeX documents built 14 ways: fonts embedded, not embedded, embedded but with the font program stripped, or as Type 3 bitmaps. Each `*-embed-*` folder is the control for its `*-noembed-*` or `*-stripped` partner. |
 | `latex-documents/` | 3 | Two-column reading order, hyphenation and maths, from the Office Convert benchmark. |
 | `latex-math/` | 4 | One page of inline and display maths built four ways: Computer Modern, Latin Modern and Times (mathptmx) with pdfLaTeX, and XeLaTeX. From `scripts/latex-math/build.sh`. |
+| `producers/` | 6 | The same content from Chrome, pdfLaTeX (Type 3 bitmap fonts), ReportLab and PyMuPDF, each breaking one thing: numbered code listings, TeX bitmap ligatures, scaled chart labels, slanted text and watermarks. From `scripts/producers/build.sh`. |
 | `multilingual-udhr/` | 49 | One PDF per script or language (Arabic, Hebrew, the Indic scripts, CJK, Thai, Ethiopic, Tibetan, Mongolian, emoji and others), mostly Universal Declaration of Human Rights text. |
 | `stirling-fixtures/` | 11 | Small generated fixtures copied from Stirling-PDF's editor tests: forms, annotations, links, tables, tagging, split content streams. |
 | `damaged-recovery/` | 8 | Byte-mutated copies of synthetic samples that one engine opens and the other refuses: five PDFBox repairs but PDFium rejects, three the other way round. From `scripts/make_damaged.py`. |
