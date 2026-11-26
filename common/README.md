@@ -49,6 +49,7 @@ character counts from `scripts/pdfium_open.mjs`, or the PDFium error code),
 | `tables/` | 13 | Tables without rules, with merged cells, nested, shaded, rules only, rotated headers, right to left, financial, multi-line, drawn in text, across pages, and a spreadsheet printed across and down. |
 | `languages/` | 8 | Bidirectional text, Arabic with vowels and tatweel, Urdu Nastaliq, Hebrew with niqqud, Thai and Lao, Unicode normalisation and look-alikes, invisible characters and emoji sequences, vertical Japanese with ruby, and four right-to-left pages. |
 | `tools/` | 17 | Inputs for particular tools: real signatures with and without a later edit, QR separator sheets, unapplied redactions, duplicate pages, XFA, a portfolio, two hybrid-reference layouts, broken linearisation, a right-to-left booklet and a pair for compare. |
+| `pdf20/` | 10 | PDF 2.0 files: one with object streams, an XMP-only title, a UTF-8 bookmark title, an associated file and page OutputIntents; one with the 2.0 structure namespace, document parts, associated files, Projection and RichMedia annotations and UseBlackPtComp; that file under AES-256 (owner-restricted, unencrypted metadata, user password); a Unicode user password; links and notes; RC4 in 2.0 and R6 in 1.7 without the extension, which validators should flag; and a broken cert-sign output. From `scripts/make_pdf20.py`, except the regression file. |
 
 ### Missing fonts
 
@@ -140,6 +141,9 @@ with no text and no images, which blank-page detection has to render to see.
   signing key is generated and thrown away on each run.
 - Unlike `make_synthetic.py`, these depend on LibreOffice, Chromium, ImageMagick and
   Tesseract, so a rebuild gives the same cases but not the same bytes.
+- `scripts/make_pdf20.py OUT_DIR` rebuilds `pdf20/` with pikepdf, apart from the
+  signed regression file, which is Stirling-PDF output. The unencrypted files and the RC4
+  file are byte-identical on every run; the AES-256 files get a new random salt each time.
 - `scripts/build_manifest.py` writes a manifest from a notes file and the folders
   given. It uses `pdfinfo`, `pdffonts` and `qpdf` when they are installed.
 - `scripts/pdfium_open.mjs DIR` opens every PDF under `DIR` with PDFium (the
